@@ -2,10 +2,10 @@
 
 import spacy  # importing spacy
 import numpy as np # importing numpy
-# nlp = spacy.load('en_core_web_md') # specifying the model we want to use. Remember to install this model by typing python -m spacy download en_core_web_md into your command line
+nlp = spacy.load('en_core_web_md') # specifying the model we want to use. Remember to install this model by typing python -m spacy download en_core_web_md into your command line
 # By using 'en_core_web_md', we get results about the complaints similarity, recipes similarity and recipe vs complaints similarity.
 # 'en_core_web_md' into your command line
-nlp = spacy.load('en_core_web_sm') # specifying the model we want to use. Remember to install this model by typing python -m spacy download en_core_web_sm into your command line
+# nlp = spacy.load('en_core_web_sm') # specifying the model we want to use. Remember to install this model by typing python -m spacy download en_core_web_sm into your command line
 # By using 'en_core_web_sm', we get warning messages about the model as well as the results about the complaints similarity, recipes similarity and recipes vs complaints similarity.
 
 # Now we are going to look into longer texts and compare them. 
@@ -38,13 +38,13 @@ for token in complaints:
         # print(token.similarity(token_))
 
 # The sum of complaints
-print("COMPLAINTS SUM", round(complaintsum, 2))
+print("COMPLAINTS SUM", complaintsum)
 
 # The average number of complaints
-print("Average: ", round((complaintsum/len(complaints)), 2))
+print("Average: ",(complaintsum/len(complaints)) )
 
 # The standard deviation of complaints
-print("Standard Deviation: ",round(np.std(ComplaintSimilarityNumbers),2))
+print("Standard Deviation: ",np.std(ComplaintSimilarityNumbers))
 
 # Below is a list of six recipe instructions.
 
@@ -72,13 +72,13 @@ for token in recipes:
         # print(token.similarity(token_))
 
 # The sum of recipes
-print("RECIPES SUM", round(recipesum,2))
+print("RECIPES SUM", recipesum)
 
 # The average number of recipes
-print("Average: ", round((recipesum/len(recipes)),2))
+print("Average: ",(recipesum/len(recipes)) )
 
 # The standard deviation of recipes
-print("Standard Deviation: ",round(np.std(RecipeSimilarityNumbers),2))
+print("Standard Deviation: ",np.std(RecipeSimilarityNumbers))
 
 # Now we want to obtain the extent of similarity between the complaints and the recipes.
 # we will loop through every recipe instruction and compare it with a complaint.
@@ -95,13 +95,13 @@ for token in recipes:
         # print(token.similarity(token_))
 
 # The sum of recipes vs complaints
-print("RECIPES VS COMPLAINTS SUM", round(recipesum,2))
+print("RECIPES VS COMPLAINTS SUM", recipesum)
 
 # The average number of recipes vs complaints
-print("Average: ",round((RecipesComplaintssum/len(recipes)),2) )
+print("Average: ",(RecipesComplaintssum/len(recipes)) )
 
 # The standard deviation of recipes vs complaints
-print("Standard Deviation: ",round(np.std(RecipesVsComplaintsSimilarityNumbers),2))
+print("Standard Deviation: ",np.std(RecipesVsComplaintsSimilarityNumbers))
 
 # What do you observe? Note that the similarity index has reduced from what we observed in the short-text example discussed in the content PDF.
 
