@@ -38,13 +38,13 @@ for token in complaints:
         # print(token.similarity(token_))
 
 # The sum of complaints
-print("COMPLAINTS SUM", complaintsum)
+print("COMPLAINTS SUM", round(complaintsum, 2))
 
 # The average number of complaints
-print("Average: ", (complaintsum/len(complaints)))
+print("Average: ", round((complaintsum/len(complaints)), 2))
 
 # The standard devation of complaints
-print("Standard Deviation: ", np.std(ComplaintSimilarityNumbers))
+print("Standard Deviation: ", round(np.std(ComplaintSimilarityNumbers), 2))
 
 # Below is a list of six recipe instructions.
 
@@ -72,13 +72,13 @@ for token in recipes:
         # print(token.similarity(token_))
 
 # The sum of recipes
-print("RECIPES SUM", recipesum)
+print("RECIPES SUM", round(recipesum, 2))
 
 # The average number of recipes
-print("Average: ", (recipesum/len(recipes)) )
+print("Average: ", round((recipesum/len(recipes)), 2))
 
 # The standard deviation of recipes
-print("Standard Deviation: ", np.std(RecipeSimilarityNumbers))
+print("Standard Deviation: ", round(np.std(RecipeSimilarityNumbers), 2))
 
 # Now we want to obtain the extent of similarity between the complaints and the recipes.
 # we will loop through every recipe instruction and compare it with a complaint.
@@ -95,13 +95,13 @@ for token in recipes:
         # print(token.similarity(token_))
 
 # The sum of recipes vs complaints
-print("RECIPES VS COMPLAINTS SUM", recipesum)
+print("RECIPES VS COMPLAINTS SUM", round(recipesum, 2))
 
 # The average number of recipes vs complaints
-print("Average: ", (RecipesComplaintssum/len(recipes)) )
+print("Average: ", round((RecipesComplaintssum/len(recipes)), 2))
 
 # The standard deviation of recipes vs complaints
-print("Standard Deviation: ", np.std(RecipesVsComplaintsSimilarityNumbers))
+print("Standard Deviation: ", round(np.std(RecipesVsComplaintsSimilarityNumbers), 2))
 
 # What do you observe? Note that the similarity index has reduced from what we observed in the short-text example discussed in the content PDF.
 
