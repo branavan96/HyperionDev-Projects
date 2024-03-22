@@ -75,9 +75,15 @@ bond - to calculate the amount you'll have to pay on a home loan""")
     else:
        print('Invalid input')
 
-# If we ask the user to input the selection as investment, the amount of money they are depositing as £25,000, the amount of interest as 8% and the years for investment as 20, we ask them to choose 'simple' or compound as the type of interest.
+# If we ask the user to input the selection as investment, 
+# the amount of money they are depositing as £25,000, 
+# the amount of interest as 8% and the years for investment as 20, 
+# we ask them to choose 'simple' or compound as the type of interest.
 # If the user chose 'simple', the total amount is £65000.
 # If the user chose 'compound', the total amount s £116523.93.
-# There is a different when we choose a different type of interest.
+# There is a difference when we choose a different type of interest.
 
-# If we ask the user to input the selection as 'bond', the present value of house as £100000, the interest rate as 7% and the amount of months planned for repayment as 120, the monthly repayments on the house would be £1161.08.
+# If we ask the user to input the selection as 'bond',
+# the present value of house as £100000,
+# the interest rate as 7% and the amount of months planned for repayment as 120,
+# the monthly repayments on the house would be £1161.08.
